@@ -1,0 +1,507 @@
+/* Dotyczące tła, całości */
+
+* {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 16px;
+    align-self: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient( #FF6A3B, #8A1BED);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wall {
+
+        grid-gap: 20px;
+        margin: 0px 30px 40px 30px;
+        padding: 30px 20px;
+        background-color: seashell;
+
+}
+
+.form-wall  {
+    width: 700px;
+    margin-left: auto;
+    margin-right:auto ;
+    margin-bottom: 40px ;
+    padding: 30px 20px;
+    background-color: seashell;
+}
+
+.mess-wall
+{
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right:auto ;
+    margin-top: 30px;
+    margin-bottom: 40px ;
+    padding: 30px 20px;
+    background:linear-gradient( #f4d9ff, seashell);
+}
+
+
+
+/* Tabele rezerwacji */
+.tab{
+display: table;    
+margin-left: auto;
+margin-right: auto;
+padding: 0;
+width: 90%;
+/* width: 85%; */
+align-self: center;
+table-layout: fixed;
+}
+
+.tab tr {
+border-bottom: 3px outset #919191;
+}
+
+.tab th{
+    font-size: 0.82rem;
+}
+.tab td{
+font-size: 0.81rem;
+word-wrap: break-word;
+}
+
+/* Kolumny tabel */
+.nr{
+    width:4%;
+}
+
+.data{
+    width:14%;
+}
+
+.start{
+    width:9%;
+}
+
+.end{
+    width:9%;
+}
+
+.name-s{
+    width:12%;
+}
+
+.theme{
+width:18%;
+}
+
+.comment{
+width:26%
+}
+
+.check{
+width:8%'
+}
+
+
+ /* Dostosowanie do wielkości ekranów */
+
+ @media screen and (min-width: 1440px) {
+    *{
+        font-size: 22px;
+    }
+    .form-wall{
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 780px){
+    *{
+        font-size: 10px;
+    }
+    .tab{
+        border: 0;
+        clip: rect(0 0 0 0);
+    }
+    .tab thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        
+    }
+    
+    .tab tr {
+        border-bottom: 3px outset #919191;
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .tab td {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 6px;
+        display: block;
+        font-size: 1rem;
+        text-align: right;
+        word-wrap: break-word;
+        height: auto;
+    }
+    
+    .tab td::before {
+        
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+    
+    .tab td:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+@media screen and (max-width: 740px) {
+    *{
+    font-size: 9px;
+    }
+
+    .form-wall {
+        width: 310px;
+    }
+}
+
+
+@media screen and (max-width: 340px) {
+    *{
+        font-size: 8px;
+    }
+    .form-wall {
+        width: 310px;
+    }
+}
+        
+
+/* pasek nawigacji (navbar.php i alt.php) */
+
+    #title a {
+        text-decoration: none;
+        font-family: georgia;
+        font-size: 1.4rem;
+        margin: 1px;
+        padding: 1px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+
+    /* Nawigacja tytuł, odniesienie do menu title a-BookHall */
+
+    #title a:hover{
+        text-decoration: none;
+        color:#FF0077;
+        transition: color 1s;
+    }
+
+    #title a:visited{
+        text-decoration: none;
+
+    }
+
+    #title a:link{
+        color: white;
+    }
+
+    .column1{
+        padding-top: 7px;
+    }
+
+    .pasekNawigacji ul {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display:block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #22004E;
+    }
+
+    .pasekNawigacji a {
+        font-size: 0.8rem;
+        color: white;
+        text-align: center;
+        padding: 13px 9px;
+        text-decoration: none;
+    }
+
+    .active {
+        background-color:  #8A1BED;
+    }
+
+    .pasekNawigacji a:visited {
+        color: #FF6A3B;
+    }
+
+/* Formy tekstów, podpisów */
+
+#big-text{
+    font-family: georgia;
+    text-decoration: underline overline ;
+    margin: 0;
+    padding: 0px 0px 20px 0px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    display:block;
+    align-self: center;
+}
+
+#under-text{
+    font-size: 1rem;
+    color: #333;
+    padding-top: 12px;
+}
+
+#info-text{
+    font-size: 1rem;
+    padding: 20px 0px;
+    display: inline-block;
+}
+
+
+/* Przyciski przenoszące do podstron */
+
+.color-button1 {
+    background: linear-gradient(#FF0077, #FF6A3B);
+    padding: 10px 40px;
+    margin: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.color-button1>span {
+    font-size: 1.1rem;
+}
+
+.color-button1:hover
+{
+    text-decoration: none;
+    transition: 0.5s linear;
+    transform: scale(1.05);
+}
+
+
+.color-button2 {
+    background: linear-gradient(#8A1BED, #223094);
+    padding: 10px 40px;
+    margin: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.color-button2>span {
+    font-size: 1.1rem;
+}
+
+.color-button2:hover
+{
+    text-decoration: none;
+    transition: 0.5s linear;
+    transform: scale(1.05);
+}
+
+input[type=submit] {
+    background: linear-gradient(#CDFF00, #00FF8F);
+    padding: 10px 40px;
+    margin: 20px;
+    border-radius: 20px;
+    border-style: none;
+    display: inline-block;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+input[type=submit]:hover
+{
+    text-decoration: none;
+    transition: 0.5s linear;
+    transform: scale(1.05);
+}
+
+
+/* Przeróbka zdjęć, siatka */
+.photos-main
+{
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 10px solid blueviolet;
+     box-sizing:border-box;
+    display: grid;
+    justify-content:space-around;
+}
+
+.photos-main img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.container a {
+
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.container a:visited{
+    color: darkslateblue;
+}
+
+.container a:link{
+    color:#333;
+}
+
+.container a:hover{
+    color: #FF6A3B;
+    text-decoration: none;
+}
+
+.photos-gallery{
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 10px solid blueviolet;
+     box-sizing:border-box;
+    display: grid;
+    justify-content:space-around;
+}
+
+.photos-gallery img{
+    max-width: 100%;
+    height: auto;
+}
+
+.photos-gallery:hover{
+    opacity: 1.0;
+    transition: 0.5s all linear;
+    transform: translate(15px, -10px) rotate(3deg);
+}
+
+
+
+/*---------- PLIKI EDYCJI PHP--------- */
+
+/* zalogujSIE */
+
+#quote{
+    width: 100%;
+    display: grid;
+    text-align: center;
+    box-sizing: border-box;
+    font-family:Times New Roman;
+    font-size: 0.8rem;
+    border-style:outset ;
+    border-width: 3px;
+    border-color: grey;
+    background-color: white;
+    padding: 20px;
+}
+
+#quote-author{
+    font-family:Times New Roman;
+    text-align: right;
+    font-size: 0.78rem;
+}
+
+#log-in{
+    font-family: georgia;
+    font-size: 1.1rem;
+    padding: 0px;
+}
+
+
+/* Komunikaty, formularze */ 
+
+.error{
+    color:red;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size: 1rem;
+}
+
+.warning{
+    color:red;
+    font-size: 1.07rem;
+}
+
+#demo{
+    color:green;
+}
+
+#uwagi{
+    width: 100%;
+}
+
+#liczba-os{
+    width: 100%;
+}
+
+#temat{
+    width: 100%;
+}
+
+
+/* sale php */
+#check-regulamin{
+    display: grid;
+    justify-content:center;
+    margin: 10px;
+}
+
+.g-recaptcha{
+      display: inline-block;
+}
+
+/* Pasek stanu dostępności oraz tabele */
+
+.bar{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+ }
+
+.bar td{
+    border: 1px solid #919191;
+}
+
+.bar th, td{
+    border-collapse:collapse;
+    height:25px;
+    padding:10px;
+    text-align:center;
+}
+
+.zajeta{
+    background:linear-gradient(red, #f4d9ff);
+}
+
+.wolna{
+    background:linear-gradient(green, #00FF8F);
+}
+
+.bottom{
+    border:0px;
+}
